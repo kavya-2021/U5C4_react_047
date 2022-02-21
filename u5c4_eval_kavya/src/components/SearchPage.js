@@ -56,7 +56,10 @@ export const SearchPage = ()=>{
         dispatch(filterExplicit())
     }
 
-    return (
+    return ( <>
+       <div>
+             <Link to={"/"}>Return to home</Link>
+         </div>
         <div id="searchpage"> 
          <h2>You are in Search page now</h2>
           <Navbar input={query}/>
@@ -69,7 +72,7 @@ export const SearchPage = ()=>{
             <button id="sort-by-date-desc" onClick={handleDateDesc}> Sort Date Down</button>
 
             <button id="sort-by-quality" onClick={handleQualityAsc}> Sort low to high Quality</button>
-            <button id="sort-by-quality-desc" onClick={handleQualityAsc}> Sort high to low quality</button>
+            <button id="sort-by-quality-desc" onClick={handleQualityDesc}> Sort high to low quality</button>
 
             <button id="filter-explicit" onClick={handleExplicit}> Explicit</button>
 
@@ -91,5 +94,7 @@ export const SearchPage = ()=>{
            </div>
 
         </div>
+
+        </>
     )
 }
